@@ -1,0 +1,103 @@
+Security Name	Close	Volume	Days Run	Ticker Symbol	Location	
+AW9U.SI	1.2700	1169000.0000	77.0000	AW9U.SI	C:\ms\pymsdl\msdata\sgx	
+JS5.SI	1.5300	635000.0000	41.0000	JS5.SI	C:\ms\pymsdl\msdata\sgx	
+F25U.SI	7.2400	2842000.0000	40.0000	F25U.SI	C:\ms\pymsdl\msdata\sgx	
+H13.SI	2.1000	509000.0000	40.0000	H13.SI	C:\ms\pymsdl\msdata\sgx	
+K71U.SI	1.4500	7492000.0000	39.0000	K71U.SI	C:\ms\pymsdl\msdata\sgx	
+P8A.SI	1.1400	15332000.0000	32.0000	P8A.SI	C:\ms\pymsdl\msdata\sgx	
+A7S.SI	0.4700	1238000.0000	28.0000	A7S.SI	C:\ms\pymsdl\msdata\sgx	
+S08.SI	1.3500	9748000.0000	27.0000	S08.SI	C:\ms\pymsdl\msdata\sgx	
+5RK.SI	0.7400	2809000.0000	22.0000	5RK.SI	C:\ms\pymsdl\msdata\sgx	
+5VJ.SI	1.0600	28780000.0000	22.0000	5VJ.SI	C:\ms\pymsdl\msdata\sgx	
+D01.SI	13.0100	47700.0000	21.0000	D01.SI	C:\ms\pymsdl\msdata\sgx	
+5ME.SI	2.2500	2053000.0000	19.0000	5ME.SI	C:\ms\pymsdl\msdata\sgx	
+K11.SI	1.5400	173000.0000	19.0000	K11.SI	C:\ms\pymsdl\msdata\sgx	
+H07.SI	0.6200	1263000.0000	18.0000	H07.SI	C:\ms\pymsdl\msdata\sgx	
+A26.SI	0.8800	14076000.0000	17.0000	A26.SI	C:\ms\pymsdl\msdata\sgx	
+GJ8.SI	0.6000	31976000.0000	17.0000	GJ8.SI	C:\ms\pymsdl\msdata\sgx	
+H30.SI	0.7100	498000.0000	17.0000	H30.SI	C:\ms\pymsdl\msdata\sgx	
+Y92.SI	0.6700	29574000.0000	17.0000	Y92.SI	C:\ms\pymsdl\msdata\sgx	
+Y03.SI	2.8000	48000.0000	16.0000	Y03.SI	C:\ms\pymsdl\msdata\sgx	
+5CP.SI	0.7600	1035000.0000	15.0000	5CP.SI	C:\ms\pymsdl\msdata\sgx	
+AK3.SI	0.7700	8043000.0000	15.0000	AK3.SI	C:\ms\pymsdl\msdata\sgx	
+S58.SI	3.2800	817000.0000	15.0000	S58.SI	C:\ms\pymsdl\msdata\sgx	
+U09.SI	0.3400	5715000.0000	15.0000	U09.SI	C:\ms\pymsdl\msdata\sgx	
+E02.SI	0.7700	501000.0000	14.0000	E02.SI	C:\ms\pymsdl\msdata\sgx	
+U19.SI	0.9500	3094000.0000	14.0000	U19.SI	C:\ms\pymsdl\msdata\sgx	
+T14.SI	1.1400	663000.0000	13.0000	T14.SI	C:\ms\pymsdl\msdata\sgx	
+ER0.SI	0.5700	2413000.0000	12.0000	ER0.SI	C:\ms\pymsdl\msdata\sgx	
+A33.SI	1.0900	8964000.0000	10.0000	A33.SI	C:\ms\pymsdl\msdata\sgx	
+O23.SI	2.0800	2739000.0000	10.0000	O23.SI	C:\ms\pymsdl\msdata\sgx	
+B58.SI	0.7700	529000.0000	7.0000	B58.SI	C:\ms\pymsdl\msdata\sgx	
+E6E.SI	0.6200	932000.0000	6.0000	E6E.SI	C:\ms\pymsdl\msdata\sgx	
+N2IU.SI	1.2400	1527000.0000	5.0000	N2IU.SI	C:\ms\pymsdl\msdata\sgx	
+NS8U.SI	0.8000	26561000.0000	4.0000	NS8U.SI	C:\ms\pymsdl\msdata\sgx	
+HD9.SI	25.9200	5200.0000	3.0000	HD9.SI	C:\ms\pymsdl\msdata\sgx	
+Q01.SI	1.0400	503000.0000	3.0000	Q01.SI	C:\ms\pymsdl\msdata\sgx	
+T55.SI	1.7700	52000.0000	3.0000	T55.SI	C:\ms\pymsdl\msdata\sgx	
+B9S.SI	0.4100	20709000.0000	2.0000	B9S.SI	C:\ms\pymsdl\msdata\sgx	
+MS7.SI	1.2000	10714000.0000	2.0000	MS7.SI	C:\ms\pymsdl\msdata\sgx	
+RE4.SI	0.4700	35535000.0000	2.0000	RE4.SI	C:\ms\pymsdl\msdata\sgx	
+544.SI	0.9000	4120000.0000	1.0000	544.SI	C:\ms\pymsdl\msdata\sgx	
+M9F.SI	0.4600	31480000.0000	1.0000	M9F.SI	C:\ms\pymsdl\msdata\sgx	
+Z59.SI	0.9300	51391000.0000	1.0000	Z59.SI	C:\ms\pymsdl\msdata\sgx	
+5UF.SI	0.4600	1426000.0000	-1.0000	5UF.SI	C:\ms\pymsdl\msdata\sgx	
+B16.SI	0.8100	5282000.0000	-2.0000	B16.SI	C:\ms\pymsdl\msdata\sgx	
+KJ7.SI	16.3500	8600.0000	-2.0000	KJ7.SI	C:\ms\pymsdl\msdata\sgx	
+S68.SI	7.3900	2314000.0000	-2.0000	S68.SI	C:\ms\pymsdl\msdata\sgx	
+F4B.SI	101.2000	7000.0000	-3.0000	F4B.SI	C:\ms\pymsdl\msdata\sgx	
+U14.SI	6.7800	1100000.0000	-3.0000	U14.SI	C:\ms\pymsdl\msdata\sgx	
+C2PU.SI	2.5200	935000.0000	-4.0000	C2PU.SI	C:\ms\pymsdl\msdata\sgx	
+H02.SI	7.4800	39000.0000	-4.0000	H02.SI	C:\ms\pymsdl\msdata\sgx	
+H78.SI	6.8100	2422000.0000	-4.0000	H78.SI	C:\ms\pymsdl\msdata\sgx	
+J85.SI	1.9000	3619000.0000	-4.0000	J85.SI	C:\ms\pymsdl\msdata\sgx	
+JS8.SI	1.9500	3957000.0000	-4.0000	JS8.SI	C:\ms\pymsdl\msdata\sgx	
+K17.SI	3.7600	4051000.0000	-4.0000	K17.SI	C:\ms\pymsdl\msdata\sgx	
+NI3.SI	0.7100	51000.0000	-4.0000	NI3.SI	C:\ms\pymsdl\msdata\sgx	
+O39.SI	10.4800	6629000.0000	-4.0000	O39.SI	C:\ms\pymsdl\msdata\sgx	
+O5RU.SI	1.6700	2215000.0000	-4.0000	O5RU.SI	C:\ms\pymsdl\msdata\sgx	
+F17.SI	2.0400	247000.0000	-5.0000	F17.SI	C:\ms\pymsdl\msdata\sgx	
+K2LU.SI	1.3300	5222000.0000	-5.0000	K2LU.SI	C:\ms\pymsdl\msdata\sgx	
+M44U.SI	1.2200	11590000.0000	-5.0000	M44U.SI	C:\ms\pymsdl\msdata\sgx	
+Q5T.SI	1.0200	4136000.0000	-5.0000	Q5T.SI	C:\ms\pymsdl\msdata\sgx	
+MU7.SI	107.2600	2100.0000	-7.0000	MU7.SI	C:\ms\pymsdl\msdata\sgx	
+X04.SI	1.4700	142000.0000	-7.0000	X04.SI	C:\ms\pymsdl\msdata\sgx	
+B61.SI	6.6500	50000.0000	-8.0000	B61.SI	C:\ms\pymsdl\msdata\sgx	
+A17U.SI	2.4400	19846000.0000	-9.0000	A17U.SI	C:\ms\pymsdl\msdata\sgx	
+AU8U.SI	1.6000	3633000.0000	-9.0000	AU8U.SI	C:\ms\pymsdl\msdata\sgx	
+C09.SI	10.8500	1694000.0000	-9.0000	C09.SI	C:\ms\pymsdl\msdata\sgx	
+C38U.SI	2.1900	18996000.0000	-9.0000	C38U.SI	C:\ms\pymsdl\msdata\sgx	
+CC3.SI	4.1800	6194000.0000	-9.0000	CC3.SI	C:\ms\pymsdl\msdata\sgx	
+CY6U.SI	0.7600	825000.0000	-9.0000	CY6U.SI	C:\ms\pymsdl\msdata\sgx	
+J69U.SI	2.1200	2366000.0000	-9.0000	J69U.SI	C:\ms\pymsdl\msdata\sgx	
+J91U.SI	0.7900	6657000.0000	-9.0000	J91U.SI	C:\ms\pymsdl\msdata\sgx	
+M1GU.SI	1.2500	4447000.0000	-9.0000	M1GU.SI	C:\ms\pymsdl\msdata\sgx	
+S63.SI	4.0800	3021000.0000	-9.0000	S63.SI	C:\ms\pymsdl\msdata\sgx	
+T82U.SI	1.7700	17792000.0000	-9.0000	T82U.SI	C:\ms\pymsdl\msdata\sgx	
+N21.SI	1.0200	19576000.0000	-15.0000	N21.SI	C:\ms\pymsdl\msdata\sgx	
+U04.SI	2.8900	161000.0000	-15.0000	U04.SI	C:\ms\pymsdl\msdata\sgx	
+BS6.SI	0.8700	7115000.0000	-20.0000	BS6.SI	C:\ms\pymsdl\msdata\sgx	
+V01.SI	4.8000	10000.0000	-20.0000	V01.SI	C:\ms\pymsdl\msdata\sgx	
+E16.SI	2.2100	3000.0000	-23.0000	E16.SI	C:\ms\pymsdl\msdata\sgx	
+5JS.SI	1.0100	1031000.0000	-26.0000	5JS.SI	C:\ms\pymsdl\msdata\sgx	
+P9D.SI	0.9000	413000.0000	-32.0000	P9D.SI	C:\ms\pymsdl\msdata\sgx	
+
+Security Name	Avg Vol	Ticker Symbol	Location	
+Z59.SI	14019900.0000	Z59.SI	C:\ms\pymsdl\msdata\sgx	
+RE4.SI	16949300.0000	RE4.SI	C:\ms\pymsdl\msdata\sgx	
+O23.SI	1498600.0000	O23.SI	C:\ms\pymsdl\msdata\sgx	
+NS8U.SI	21724600.0000	NS8U.SI	C:\ms\pymsdl\msdata\sgx	
+MS7.SI	8124000.0000	MS7.SI	C:\ms\pymsdl\msdata\sgx	
+M9F.SI	17432200.0000	M9F.SI	C:\ms\pymsdl\msdata\sgx	
+GJ8.SI	20292300.0000	GJ8.SI	C:\ms\pymsdl\msdata\sgx	
+B9S.SI	8321000.0000	B9S.SI	C:\ms\pymsdl\msdata\sgx	
+A33.SI	6813600.0000	A33.SI	C:\ms\pymsdl\msdata\sgx	
+5VJ.SI	12097900.0000	5VJ.SI	C:\ms\pymsdl\msdata\sgx	
+544.SI	1102700.0000	544.SI	C:\ms\pymsdl\msdata\sgx	
+
+Security Name	ATR	ATR2	Close	Stop	Ticker Symbol	Location	
+S08.SI	0.0312	0.0624	1.3500	1.2876	S08.SI	C:\ms\pymsdl\msdata\sgx	
+M9F.SI	0.0256	0.0512	0.4600	0.4088	M9F.SI	C:\ms\pymsdl\msdata\sgx	
+C61U.SI	0.0431	0.0862	1.6200	1.5338	C61U.SI	C:\ms\pymsdl\msdata\sgx	
+C31.SI	0.0677	0.1355	3.4900	3.3545	C31.SI	C:\ms\pymsdl\msdata\sgx	
+AW9U.SI	0.0416	0.0832	1.2700	1.1868	AW9U.SI	C:\ms\pymsdl\msdata\sgx	
