@@ -2,70 +2,131 @@ import csv
 import urllib.request
 import datetime
 
+
 def get_quotes():
-    return [ row for row in csv.reader(open("C:/ms/pymsdl/sgx2.csv"), delimiter='\t') ]
+    return [row for row in csv.reader(open("sgx2.csv"), delimiter='\t')]
+
 
 def download_history(quote, name):
-    today = datetime.datetime.today()
     yahoo_url = ("http://ichart.finance.yahoo.com/table.csv?s=" +
                  quote +
                  "&a=00&b=1&c=" +
-                 str(today.year - 1) +
+                 str(2011) +
                  "&d=" +
-                 str(today.month - 1).zfill(2) +
+                 str(6).zfill(2) +
                  "&e=" +
-                 str(today.day) + 
+                 str(4) +
                  "&f=" +
-                 str(today.year) +
+                 str(2013) +
                  "&g=d&ignore=.csv")
     try:
-        #check whether we need to download
-        try:
-            reader = csv.reader(open("C:/ms/pymsdl/dldata/sgx/" + name + ".csv")) 
-            next(reader) #ignore header line
-            row = next(reader)
-            if (datetime.datetime.today() - datetime.datetime.strptime(row[0], "%Y-%m-%d")).days <= 1:
-                #no need to update
-                print("Already updated")
-                return 1
-        except:
-            pass
-                                
         # Download the file from `url` and save it locally under `file_name`:
-        with open("C:/ms/pymsdl/dldata/sgx/" + name + ".csv", 'wb') as out_file:
-            result = urllib.request.urlopen(yahoo_url).read() # a `bytes` object
-            out_file.write(result)
+        out_file = open("dldata/sgx/" + name + ".csv", 'wb')
+        result = urllib.request.urlopen(yahoo_url).read()  # a `bytes` object
+        out_file.write(result)
+        out_file.close()
         return 0
     except urllib.error.HTTPError:
         return 1
 
-def format_date(d):
+
+def format_hist_date(d):
     ds = datetime.datetime.strptime(d, "%Y-%m-%d") - datetime.timedelta(days=365)
     return ds.strftime("%Y%m%d")
-    
-def transform_csv(quote, name):
-    writer = csv.writer(open("C:/ms/pymsdl/dldata/sgx/" + name + ".txt", "w"))
-    reader = csv.reader(open("C:/ms/pymsdl/dldata/sgx/" + name + ".csv"))
-    next(reader) #ignore header line
-    for row in reader:            
+
+
+def format_new_date(d):
+    ds = datetime.datetime.strptime(d, "%m/%d/%Y") - datetime.timedelta(days=365)
+    return ds.strftime("%Y%m%d")
+
+
+def transform_history_csv(quote, name):
+    writer = csv.writer(open("dldata/sgx/" + name + ".hist", "w"))
+    reader = csv.reader(open("dldata/sgx/" + name + ".csv"))
+    next(reader)  # ignore header line
+    for row in reader:
         writer.writerow([quote,
-                         format_date(row[0]),
+                         format_hist_date(row[0]),
                          row[1],
                          row[2],
                          row[3],
                          row[4],
                          row[5]])
-            
+    reader.close()
+    writer.close()
+
+
+def check(quote, name):
+    #check whether we need to download
+    try:
+        reader = csv.reader(open("dldata/sgx/" + name + ".csv"))
+        next(reader)  # ignore header line
+        row = next(reader)
+        if (datetime.datetime.today() - datetime.datetime.strptime(row[0], "%Y-%m-%d")).days <= 1:
+            #no need to update
+            print("Already updated")
+            return 1
+        reader.close()
+    except:
+        pass
+
+
+
+def get_latest(quote, name):
+    yahoo_url = ("http://download.finance.yahoo.com/d/quotes.csv?s=" +
+                 quote +
+                 "&f=sd1o0h0g0l1v0p0")
+    try:
+        # Download the file from `url` and save it locally under `file_name`:
+        out_file = open("dldata/sgx/" + name + ".new", "ab")
+        result = urllib.request.urlopen(yahoo_url).read()  # a `bytes` object
+        out_file.write(result)
+        out_file.close()
+        return 0
+    except urllib.error.HTTPError:
+        return 1
+
+
+def combine_csv(quote, name):
+    writer = csv.writer(open("dldata/sgx/" + name + ".txt", "w"))
+    reader = csv.reader(open("dldata/sgx/" + name + ".new"))
+    for row in reader:
+        writer.writerow([quote,
+                         format_new_date(row[1]),
+                         row[2],
+                         row[3],
+                         row[4],
+                         row[5],
+                         row[6]])
+    reader.close()
+    reader = csv.reader(open("dldata/sgx/" + name + ".hist"))
+    next(reader)  # ignore header line
+    for row in reader:
+        writer.writerow([quote,
+                         format_hist_date(row[0]),
+                         row[1],
+                         row[2],
+                         row[3],
+                         row[4],
+                         row[5]])
+
+
+def process(quote, name):
+    print(quote + "\t" + name)
+    if download_history(quote, name) == 0:
+        transform_history_csv(quote, name)
+    get_latest(quote, name)
+    combine_csv(quote, name)
+
 
 def main():
-    for row in get_quotes():        
+    for row in get_quotes():
         quote = row[5] + ".SI"
-        keepcharacters = (' ','.','_')
+        keepcharacters = (' ', '.', '_')
         name = "".join(c for c in row[0] if c.isalnum() or c in keepcharacters).rstrip()
         if not quote.startswith("Ticker"):
-            print(quote + "\t" + name)
-            if download_history(quote, name) == 0:
-                transform_csv(quote, name)
+            process(quote, name)
 
-if __name__ == '__main__': 
+
+if __name__ == '__main__':
     main()
