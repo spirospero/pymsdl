@@ -1,0 +1,21 @@
+Each record has the following fields (delimited by a semicolon ';'):
+
+Field       Attribute
+-----       ---------
+TRADE DATE  (YYYY-MM-DD)
+STOCK NAME  (30 chars)
+REMARKS     (8 chars)
+               SUSP - Suspended   
+CURRENCY    (4 chars)
+HIGH        (7 chars, including decimal point)
+LOW         (7 chars, including decimal point)
+CLOSE       (7 chars, including decimal point)
+CHANGE      (7 chars, including sign & decimal point)
+VOLUME      (10 chars)
+BID         (9 chars, including sign & decimal point)
+OFFER       (9 chars, including sign & decimal point)
+MARKET      (13 chars)
+OPEN        (7 chars, including decimal point)
+VALUE       (11 chars)
+STOCK CODE  (4 chars)      
+
