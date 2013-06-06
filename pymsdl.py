@@ -19,12 +19,12 @@ def download_history(quote, name):
                  "&f=" +
                  str(2013) +
                  "&g=d&ignore=.csv")
+    print(yahoo_url)
     try:
         # Download the file from `url` and save it locally under `file_name`:
-        out_file = open("dldata/sgx/" + name + ".csv", 'wb')
-        result = urllib.request.urlopen(yahoo_url).read()  # a `bytes` object
-        out_file.write(result)
-        out_file.close()
+        with open("dldata/sgx/" + name + ".csv", 'wb') as out_file:
+            result = urllib.request.urlopen(yahoo_url).read()  # a `bytes` object
+            out_file.write(result)
         return 0
     except urllib.error.HTTPError:
         return 1
@@ -41,25 +41,25 @@ def format_new_date(d):
 
 
 def transform_history_csv(quote, name):
-    writer = csv.writer(open("dldata/sgx/" + name + ".hist", "w"))
-    reader = csv.reader(open("dldata/sgx/" + name + ".csv"))
-    next(reader)  # ignore header line
-    for row in reader:
-        writer.writerow([quote,
-                         format_hist_date(row[0]),
-                         row[1],
-                         row[2],
-                         row[3],
-                         row[4],
-                         row[5]])
-    reader.close()
-    writer.close()
+    with open("dldata/sgx/" + name + ".hist", "w", newline = '') as wfile:
+        writer = csv.writer(wfile)
+        with open("dldata/sgx/" + name + ".csv", newline = '') as rfile:
+            reader = csv.reader(rfile)
+            next(reader)  # ignore header line
+            for row in reader:
+                writer.writerow([quote,
+                                 format_hist_date(row[0]),
+                                 row[1],
+                                 row[2],
+                                 row[3],
+                                 row[4],
+                                 row[5].rstrip()])
 
 
 def check(quote, name):
     #check whether we need to download
     try:
-        reader = csv.reader(open("dldata/sgx/" + name + ".csv"))
+        reader = csv.reader(open("dldata/sgx/" + name + ".csv", newline = ''))
         next(reader)  # ignore header line
         row = next(reader)
         if (datetime.datetime.today() - datetime.datetime.strptime(row[0], "%Y-%m-%d")).days <= 1:
@@ -76,45 +76,45 @@ def get_latest(quote, name):
     yahoo_url = ("http://download.finance.yahoo.com/d/quotes.csv?s=" +
                  quote +
                  "&f=sd1o0h0g0l1v0p0")
-    try:
+    #try:
         # Download the file from `url` and save it locally under `file_name`:
-        out_file = open("dldata/sgx/" + name + ".new", "ab")
+    with open("dldata/sgx/" + name + ".new", "ab") as out_file:
         result = urllib.request.urlopen(yahoo_url).read()  # a `bytes` object
         out_file.write(result)
-        out_file.close()
-        return 0
-    except urllib.error.HTTPError:
-        return 1
+    return 0
+    #except urllib.error.HTTPError:
+    #    return 1
 
 
 def combine_csv(quote, name):
-    writer = csv.writer(open("dldata/sgx/" + name + ".txt", "w"))
-    reader = csv.reader(open("dldata/sgx/" + name + ".new"))
-    for row in reader:
-        writer.writerow([quote,
-                         format_new_date(row[1]),
-                         row[2],
-                         row[3],
-                         row[4],
-                         row[5],
-                         row[6]])
-    reader.close()
-    reader = csv.reader(open("dldata/sgx/" + name + ".hist"))
-    next(reader)  # ignore header line
-    for row in reader:
-        writer.writerow([quote,
-                         format_hist_date(row[0]),
-                         row[1],
-                         row[2],
-                         row[3],
-                         row[4],
-                         row[5]])
-
+    try:
+        with open("dldata/sgx/" + name + ".txt", "w", newline = '') as wfile:
+            writer = csv.writer(wfile)
+            with open("dldata/sgx/" + name + ".new", newline = '') as rfile:
+                reader = csv.reader(rfile)
+                for row in reader:
+                    if row[2] == "N/A":
+                        return
+                    writer.writerow([quote,
+                                     format_new_date(row[1]),
+                                     row[2],
+                                     row[3],
+                                     row[4],
+                                     row[5],
+                                     row[6]])
+            with open("dldata/sgx/" + name + ".hist", newline = '') as rfile:
+                reader = csv.reader(rfile)
+                #next(reader)  # ignore header line
+                for row in reader:
+                    writer.writerow(row)
+    except:
+        pass
 
 def process(quote, name):
     print(quote + "\t" + name)
     if download_history(quote, name) == 0:
         transform_history_csv(quote, name)
+    #download_history(quote, name)
     get_latest(quote, name)
     combine_csv(quote, name)
 
